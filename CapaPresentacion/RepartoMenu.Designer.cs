@@ -32,6 +32,7 @@
             btn_tomar_pedidos = new Button();
             btn_salir = new Button();
             groupBox1 = new GroupBox();
+            label1 = new Label();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -77,6 +78,7 @@
             // groupBox1
             // 
             groupBox1.BackColor = Color.Transparent;
+            groupBox1.Controls.Add(label1);
             groupBox1.Controls.Add(btn_mis_pedidos);
             groupBox1.Controls.Add(btn_salir);
             groupBox1.Controls.Add(btn_tomar_pedidos);
@@ -85,6 +87,18 @@
             groupBox1.Size = new Size(291, 412);
             groupBox1.TabIndex = 3;
             groupBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
+            label1.Font = new Font("Segoe Print", 26.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.PeachPuff;
+            label1.Location = new Point(66, 26);
+            label1.Name = "label1";
+            label1.Size = new Size(167, 62);
+            label1.TabIndex = 3;
+            label1.Text = "Reparto";
             // 
             // RepartoMenu
             // 
@@ -95,6 +109,7 @@
             Name = "RepartoMenu";
             Size = new Size(900, 600);
             groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -104,5 +119,6 @@
         private Button btn_tomar_pedidos;
         private Button btn_salir;
         private GroupBox groupBox1;
+        private Label label1;
     }
 }

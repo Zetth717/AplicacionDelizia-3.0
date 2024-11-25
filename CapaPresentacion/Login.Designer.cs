@@ -35,6 +35,7 @@
             btn_cancelar = new Button();
             btn_entrar = new Button();
             groupBox1 = new GroupBox();
+            label1 = new Label();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -110,6 +111,7 @@
             // groupBox1
             // 
             groupBox1.BackColor = Color.Transparent;
+            groupBox1.Controls.Add(label1);
             groupBox1.Controls.Add(txt_contrasena);
             groupBox1.Controls.Add(btn_entrar);
             groupBox1.Controls.Add(lbl_cedula);
@@ -121,6 +123,18 @@
             groupBox1.Size = new Size(291, 412);
             groupBox1.TabIndex = 6;
             groupBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
+            label1.Font = new Font("Segoe Print", 26.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.PeachPuff;
+            label1.Location = new Point(93, 26);
+            label1.Name = "label1";
+            label1.Size = new Size(119, 62);
+            label1.TabIndex = 7;
+            label1.Text = "Inicio";
             // 
             // Login
             // 
@@ -144,5 +158,6 @@
         private Button btn_cancelar;
         private Button btn_entrar;
         private GroupBox groupBox1;
+        private Label label1;
     }
 }

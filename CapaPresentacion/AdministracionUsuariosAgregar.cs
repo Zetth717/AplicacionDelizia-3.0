@@ -33,12 +33,13 @@ namespace CapaPresentacion
             barraSuperior.BotonMinimizarClick += BarraSuperior_BotonMinimizarClick;
             barraSuperior.BotonVolverClick += BarraSuperior_BotonVolverClick;
 
+
             LAdministracion la = new LAdministracion();
             List<Funcionario> funcionarios = la.obtener_funcionarios();
 
             foreach (Funcionario f in funcionarios)
             {
-                listBoxUsuarios.Items.Add("" + f.nombre + f.apellido);
+                listBoxUsuarios.Items.Add($"{f.nombre} - {f.apellido} - ({f.cedula})");
             }
         }
 
@@ -81,25 +82,47 @@ namespace CapaPresentacion
 
         private void btn_ingresar_Click(object sender, EventArgs e)
         {
-            LAdministracion ladministracion = new LAdministracion();
+            try
+            {
+                // Verificar que todos los campos estén completos
+                if (string.IsNullOrWhiteSpace(txt_cedula.Text) ||
+                    string.IsNullOrWhiteSpace(txt_nombre.Text) ||
+                    string.IsNullOrWhiteSpace(txt_apellido.Text) ||
+                    string.IsNullOrWhiteSpace(txt_direccion.Text) ||
+                    string.IsNullOrWhiteSpace(txt_telefono.Text) ||
+                    string.IsNullOrWhiteSpace(txt_correo.Text) ||
+                    string.IsNullOrWhiteSpace(txt_contrasena.Text) ||
+                    string.IsNullOrWhiteSpace(menu_rol.Text) || menu_rol.Text == "0")
+                {
+                    MessageBox.Show("Por favor, completa todos los campos antes de continuar.", "Campos Vacíos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return; // Salimos del método si hay campos vacíos
+                }
+                LAdministracion ladministracion = new LAdministracion();
 
-            Funcionario nuevo_usuario = obtener_datos_funcionario();
-            ladministracion.insertar_usuario(nuevo_usuario);
+                Funcionario nuevo_usuario = obtener_datos_funcionario();
+                ladministracion.insertar_usuario(nuevo_usuario);
 
-            txt_cedula.Text = string.Empty;
-            txt_nombre.Text = string.Empty;
-            txt_apellido.Text = string.Empty;
-            txt_direccion.Text = string.Empty;
-            txt_telefono.Text = string.Empty;
-            txt_correo.Text = string.Empty;
-            txt_contrasena.Text = string.Empty;
-            // txt_rol.Text = string.Empty;
-            menu_rol.Text = "0";
-            CargarUsuariosActivos();
+                txt_cedula.Text = string.Empty;
+                txt_nombre.Text = string.Empty;
+                txt_apellido.Text = string.Empty;
+                txt_direccion.Text = string.Empty;
+                txt_telefono.Text = string.Empty;
+                txt_correo.Text = string.Empty;
+                txt_contrasena.Text = string.Empty;
+                // txt_rol.Text = string.Empty;
+                menu_rol.Text = "0";
+                CargarUsuariosActivos();
+                MessageBox.Show("Usuario registrado exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                // Manejo de errores inesperados
+                MessageBox.Show("Ocurrió un error al registrar el usuario: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
 
-        private void btnAlta_Click(object sender, EventArgs e)
+    private void btnAlta_Click(object sender, EventArgs e)
         {
             string cedula = textCedulaAlta.Text.Trim();
             if (string.IsNullOrEmpty(cedula))
@@ -113,6 +136,7 @@ namespace CapaPresentacion
             {
                 logica.DarAltaUsuario(cedula);
                 MessageBox.Show("Usuario dado de alta exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                CargarUsuariosActivos();
             }
             catch (Exception ex)
             {
@@ -133,22 +157,27 @@ namespace CapaPresentacion
             foreach (Funcionario f in funcionarios)
             {
                 // Mostramos el nombre y apellido
-                listBoxUsuarios.Items.Add($"{f.nombre} - {f.apellido} ({f.cedula})"); 
+                listBoxUsuarios.Items.Add($"{f.nombre} - {f.apellido} ({f.cedula})");
             }
         }
 
+        
         private void btnBajaUsuario_Click(object sender, EventArgs e)
         {
-           /* // Verificar si se ha seleccionado un usuario en el ListBox
+
+            // Verificar si se ha seleccionado un usuario en el ListBox
             if (listBoxUsuarios.SelectedIndex != -1)
             {
-                // Obtener el nombre completo del usuario seleccionado
-                string nombreCompleto = listBoxUsuarios.SelectedItem.ToString();
+                // Obtener el texto seleccionado en el ListBox
+                string seleccion = listBoxUsuarios.SelectedItem.ToString();
 
-                // Obtener el Funcionario correspondiente al nombre completo
+                // Dividir el texto para extraer la cédula, si se incluye
+                string cedulaSeleccionada = seleccion.Split('(').Last().Trim(')', ' ');
+
+                // Buscar al Funcionario por la cédula
                 LAdministracion logica = new LAdministracion();
                 Funcionario usuarioSeleccionado = logica.obtener_funcionarios()
-                    .FirstOrDefault(f => f.nombre + " " + f.apellido == nombreCompleto);
+                    .FirstOrDefault(f => f.cedula == cedulaSeleccionada);
 
                 if (usuarioSeleccionado != null)
                 {
@@ -170,7 +199,7 @@ namespace CapaPresentacion
             {
                 // Si no se ha seleccionado un usuario
                 MessageBox.Show("Por favor, selecciona un usuario para dar de baja.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }*/
+            }
         }
-    }
+    } 
 }

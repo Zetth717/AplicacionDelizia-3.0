@@ -87,11 +87,12 @@
             // listBoxUsuarios
             // 
             listBoxUsuarios.BackColor = Color.PeachPuff;
+            listBoxUsuarios.Font = new Font("Segoe Print", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             listBoxUsuarios.FormattingEnabled = true;
-            listBoxUsuarios.ItemHeight = 15;
+            listBoxUsuarios.ItemHeight = 28;
             listBoxUsuarios.Location = new Point(23, 82);
             listBoxUsuarios.Name = "listBoxUsuarios";
-            listBoxUsuarios.Size = new Size(277, 334);
+            listBoxUsuarios.Size = new Size(277, 312);
             listBoxUsuarios.TabIndex = 27;
             // 
             // btnBajaUsuario

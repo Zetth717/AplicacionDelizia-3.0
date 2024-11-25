@@ -31,6 +31,7 @@
             btn_nuevopedido = new Button();
             btn_salir = new Button();
             groupBox1 = new GroupBox();
+            label1 = new Label();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -39,7 +40,7 @@
             btn_nuevopedido.BackColor = Color.Peru;
             btn_nuevopedido.FlatStyle = FlatStyle.Popup;
             btn_nuevopedido.Font = new Font("Segoe Print", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btn_nuevopedido.Location = new Point(85, 147);
+            btn_nuevopedido.Location = new Point(83, 147);
             btn_nuevopedido.Name = "btn_nuevopedido";
             btn_nuevopedido.Size = new Size(133, 38);
             btn_nuevopedido.TabIndex = 0;
@@ -52,7 +53,7 @@
             btn_salir.BackColor = Color.Peru;
             btn_salir.FlatStyle = FlatStyle.Popup;
             btn_salir.Font = new Font("Segoe Print", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btn_salir.Location = new Point(85, 204);
+            btn_salir.Location = new Point(83, 204);
             btn_salir.Name = "btn_salir";
             btn_salir.Size = new Size(133, 38);
             btn_salir.TabIndex = 1;
@@ -63,6 +64,7 @@
             // groupBox1
             // 
             groupBox1.BackColor = Color.Transparent;
+            groupBox1.Controls.Add(label1);
             groupBox1.Controls.Add(btn_nuevopedido);
             groupBox1.Controls.Add(btn_salir);
             groupBox1.Location = new Point(540, 93);
@@ -70,6 +72,18 @@
             groupBox1.Size = new Size(291, 412);
             groupBox1.TabIndex = 2;
             groupBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
+            label1.Font = new Font("Segoe Print", 26.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.PeachPuff;
+            label1.Location = new Point(48, 26);
+            label1.Name = "label1";
+            label1.Size = new Size(200, 62);
+            label1.TabIndex = 3;
+            label1.Text = "Recepción";
             // 
             // RecepcionMenu
             // 
@@ -81,6 +95,7 @@
             Name = "RecepcionMenu";
             Size = new Size(900, 600);
             groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -89,5 +104,6 @@
         private Button btn_nuevopedido;
         private Button btn_salir;
         private GroupBox groupBox1;
+        private Label label1;
     }
 }
