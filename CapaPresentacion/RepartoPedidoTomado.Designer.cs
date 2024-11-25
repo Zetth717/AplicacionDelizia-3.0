@@ -32,16 +32,18 @@
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
+            pan_productos = new Panel();
+            pan_productos.SuspendLayout();
             SuspendLayout();
             // 
             // btn_cambiar_estado
             // 
-            btn_cambiar_estado.BackColor = Color.Peru;
+            btn_cambiar_estado.BackColor = Color.PeachPuff;
             btn_cambiar_estado.FlatStyle = FlatStyle.Popup;
-            btn_cambiar_estado.Font = new Font("Segoe Print", 9F);
-            btn_cambiar_estado.Location = new Point(9, 205);
+            btn_cambiar_estado.Font = new Font("Segoe Print", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn_cambiar_estado.Location = new Point(48, 174);
             btn_cambiar_estado.Name = "btn_cambiar_estado";
-            btn_cambiar_estado.Size = new Size(75, 23);
+            btn_cambiar_estado.Size = new Size(107, 36);
             btn_cambiar_estado.TabIndex = 0;
             btn_cambiar_estado.Text = "ESTADO";
             btn_cambiar_estado.UseVisualStyleBackColor = false;
@@ -49,47 +51,62 @@
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe Print", 9F);
-            label1.Location = new Point(9, 7);
+            label1.BackColor = Color.PeachPuff;
+            label1.BorderStyle = BorderStyle.FixedSingle;
+            label1.Font = new Font("Segoe Print", 12F, FontStyle.Bold);
+            label1.Location = new Point(8, 6);
             label1.Name = "label1";
-            label1.Size = new Size(67, 21);
+            label1.Size = new Size(194, 30);
             label1.TabIndex = 1;
             label1.Text = "Id Pedido";
+            label1.TextAlign = ContentAlignment.TopCenter;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Segoe Print", 9F);
-            label2.Location = new Point(9, 47);
+            label2.BorderStyle = BorderStyle.FixedSingle;
+            label2.Font = new Font("Segoe Print", 12F, FontStyle.Bold);
+            label2.Location = new Point(13, 16);
             label2.Name = "label2";
-            label2.Size = new Size(103, 21);
+            label2.Size = new Size(138, 30);
             label2.TabIndex = 2;
             label2.Text = "Nombre Cliente";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Segoe Print", 9F);
-            label3.Location = new Point(9, 93);
+            label3.BorderStyle = BorderStyle.FixedSingle;
+            label3.Font = new Font("Segoe Print", 12F, FontStyle.Bold);
+            label3.Location = new Point(13, 52);
             label3.Name = "label3";
-            label3.Size = new Size(110, 21);
+            label3.Size = new Size(150, 30);
             label3.TabIndex = 3;
             label3.Text = "Direccion Cliente";
+            // 
+            // pan_productos
+            // 
+            pan_productos.BackColor = Color.PeachPuff;
+            pan_productos.BorderStyle = BorderStyle.FixedSingle;
+            pan_productos.Controls.Add(label3);
+            pan_productos.Controls.Add(label2);
+            pan_productos.Location = new Point(8, 39);
+            pan_productos.Name = "pan_productos";
+            pan_productos.Size = new Size(194, 113);
+            pan_productos.TabIndex = 4;
             // 
             // RepartoPedidoTomado
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.PeachPuff;
-            Controls.Add(label3);
-            Controls.Add(label2);
+            BackColor = Color.Peru;
+            Controls.Add(pan_productos);
             Controls.Add(label1);
             Controls.Add(btn_cambiar_estado);
             Name = "RepartoPedidoTomado";
             Size = new Size(209, 231);
+            pan_productos.ResumeLayout(false);
+            pan_productos.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -98,5 +115,6 @@
         private Label label1;
         private Label label2;
         private Label label3;
+        private Panel pan_productos;
     }
 }

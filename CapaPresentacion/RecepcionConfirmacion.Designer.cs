@@ -79,6 +79,7 @@
             // pan_contenido
             // 
             pan_contenido.BackColor = Color.Transparent;
+            pan_contenido.BorderStyle = BorderStyle.FixedSingle;
             pan_contenido.Controls.Add(pan_detalles);
             pan_contenido.Controls.Add(pan_cliente);
             pan_contenido.Location = new Point(63, 75);
@@ -89,10 +90,11 @@
             // pan_detalles
             // 
             pan_detalles.BackColor = Color.Peru;
+            pan_detalles.BorderStyle = BorderStyle.FixedSingle;
             pan_detalles.Controls.Add(lbl_total);
             pan_detalles.Controls.Add(pan_productos);
             pan_detalles.Controls.Add(lbl_subtitulo1);
-            pan_detalles.Location = new Point(394, 3);
+            pan_detalles.Location = new Point(392, 3);
             pan_detalles.Name = "pan_detalles";
             pan_detalles.Size = new Size(373, 385);
             pan_detalles.TabIndex = 1;
@@ -111,6 +113,7 @@
             // 
             pan_productos.AutoScroll = true;
             pan_productos.BackColor = Color.PeachPuff;
+            pan_productos.BorderStyle = BorderStyle.FixedSingle;
             pan_productos.Location = new Point(3, 33);
             pan_productos.Name = "pan_productos";
             pan_productos.Size = new Size(367, 300);
@@ -129,6 +132,7 @@
             // pan_cliente
             // 
             pan_cliente.BackColor = Color.Peru;
+            pan_cliente.BorderStyle = BorderStyle.FixedSingle;
             pan_cliente.Controls.Add(lbl_subtitulo);
             pan_cliente.Controls.Add(lbl_direccion);
             pan_cliente.Controls.Add(txt_direccion);

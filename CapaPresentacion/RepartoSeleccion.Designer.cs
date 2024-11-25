@@ -37,6 +37,7 @@
             pan_pedidos.AutoScroll = true;
             pan_pedidos.AutoScrollMargin = new Size(10, 10);
             pan_pedidos.BackColor = Color.Transparent;
+            pan_pedidos.BorderStyle = BorderStyle.FixedSingle;
             pan_pedidos.Location = new Point(12, 38);
             pan_pedidos.Name = "pan_pedidos";
             pan_pedidos.Size = new Size(871, 492);

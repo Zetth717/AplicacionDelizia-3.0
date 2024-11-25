@@ -73,7 +73,7 @@ namespace CapaLogica
         public void DarBajaUsuario(string cedula)
         {
             DAdministracion datos = new DAdministracion();
-            datos.DarAltaUsuario(cedula);
+            datos.DarBajaUsuario(cedula);
         }
     }
 }

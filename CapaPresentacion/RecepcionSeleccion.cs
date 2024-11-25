@@ -70,7 +70,7 @@ namespace CapaPresentacion
             foreach (Producto producto in productos)
             {
                 RecepcionProducto rp = new RecepcionProducto(producto);
-                if (contador%3 == 0){
+                if (contador%4 == 0){
                     if (contador == 0){
                         x = 5;
                         y = 20;

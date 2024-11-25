@@ -64,6 +64,7 @@
             pan_productos.AutoScroll = true;
             pan_productos.AutoScrollMargin = new Size(10, 10);
             pan_productos.BackColor = Color.Transparent;
+            pan_productos.BorderStyle = BorderStyle.FixedSingle;
             pan_productos.Location = new Point(12, 38);
             pan_productos.Name = "pan_productos";
             pan_productos.Size = new Size(871, 492);

@@ -19,6 +19,10 @@ namespace CapaPresentacion
             InitializeComponent();
             this.producto = producto;
             actualizar_informacion();
+
+            string ruta_imagen = "C:\\Users\\crist\\OneDrive\\Escritorio\\delizia_app_funcional\\aplicacion-delizia\\AplicacionDelizia\\Imagenes\\" + producto.id + ".png";
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.ImageLocation = ruta_imagen;
         }
 
         public void actualizar_informacion()

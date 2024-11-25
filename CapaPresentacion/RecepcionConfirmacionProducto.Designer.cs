@@ -34,9 +34,11 @@
             // lbl_contenido
             // 
             lbl_contenido.AutoSize = true;
-            lbl_contenido.Location = new Point(3, 3);
+            lbl_contenido.BackColor = Color.Peru;
+            lbl_contenido.Font = new Font("Segoe Print", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lbl_contenido.Location = new Point(3, 9);
             lbl_contenido.Name = "lbl_contenido";
-            lbl_contenido.Size = new Size(335, 15);
+            lbl_contenido.Size = new Size(523, 28);
             lbl_contenido.TabIndex = 0;
             lbl_contenido.Text = "Cantidad | Nombre del producto | Precio unitario | Precio Total";
             // 
@@ -44,9 +46,11 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.Peru;
+            BorderStyle = BorderStyle.FixedSingle;
             Controls.Add(lbl_contenido);
             Name = "RecepcionConfirmacionProducto";
-            Size = new Size(361, 23);
+            Size = new Size(359, 47);
             ResumeLayout(false);
             PerformLayout();
         }

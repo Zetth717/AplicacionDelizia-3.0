@@ -35,18 +35,21 @@
             // 
             // pan_productos
             // 
-            pan_productos.Location = new Point(3, 29);
+            pan_productos.BackColor = Color.PeachPuff;
+            pan_productos.BorderStyle = BorderStyle.FixedSingle;
+            pan_productos.Location = new Point(3, 35);
             pan_productos.Name = "pan_productos";
-            pan_productos.Size = new Size(144, 139);
+            pan_productos.Size = new Size(194, 173);
             pan_productos.TabIndex = 0;
             // 
             // btn_cambiar_estado
             // 
-            btn_cambiar_estado.BackColor = Color.Peru;
+            btn_cambiar_estado.BackColor = Color.PeachPuff;
             btn_cambiar_estado.FlatStyle = FlatStyle.Popup;
-            btn_cambiar_estado.Location = new Point(37, 174);
+            btn_cambiar_estado.Font = new Font("Segoe Print", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn_cambiar_estado.Location = new Point(44, 210);
             btn_cambiar_estado.Name = "btn_cambiar_estado";
-            btn_cambiar_estado.Size = new Size(75, 23);
+            btn_cambiar_estado.Size = new Size(107, 36);
             btn_cambiar_estado.TabIndex = 1;
             btn_cambiar_estado.Text = "ESTADO";
             btn_cambiar_estado.UseVisualStyleBackColor = false;
@@ -54,26 +57,27 @@
             // 
             // lbl_id
             // 
-            lbl_id.AutoSize = true;
-            lbl_id.Font = new Font("Segoe Print", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lbl_id.Location = new Point(30, 4);
+            lbl_id.BackColor = Color.PeachPuff;
+            lbl_id.BorderStyle = BorderStyle.FixedSingle;
+            lbl_id.Font = new Font("Segoe Print", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lbl_id.Location = new Point(3, 4);
             lbl_id.Name = "lbl_id";
-            lbl_id.Size = new Size(89, 21);
+            lbl_id.Size = new Size(194, 28);
             lbl_id.TabIndex = 2;
             lbl_id.Text = "Id del pedido";
+            lbl_id.TextAlign = ContentAlignment.TopCenter;
             // 
             // CocinaPedido
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.PeachPuff;
+            BackColor = Color.Peru;
             Controls.Add(lbl_id);
             Controls.Add(btn_cambiar_estado);
             Controls.Add(pan_productos);
             Name = "CocinaPedido";
-            Size = new Size(150, 200);
+            Size = new Size(200, 250);
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion

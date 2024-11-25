@@ -16,7 +16,7 @@ namespace CapaPresentacion
     {
         Funcionario user;
         Ventana padre;
-        MinimizarCerrar barraSuperior;
+        MinimizarCerrarVolver barraSuperior;
         public AdministracionUsuariosAgregar(Ventana padre, Funcionario user)
         {
             InitializeComponent();
@@ -24,13 +24,14 @@ namespace CapaPresentacion
             this.user = user;
 
             // Instanciar y configurar la barra
-            barraSuperior = new MinimizarCerrar();
+            barraSuperior = new MinimizarCerrarVolver();
             barraSuperior.Dock = DockStyle.Top; // O usar: barraSuperior.Location = new Point(0, 0);
             barraSuperior.Width = this.Width; // Asegúrate de ajustar al tamaño del formulario
             this.Controls.Add(barraSuperior);
             // Eventos de la barra
             barraSuperior.BotonCerrarClick += BarraSuperior_BotonCerrarClick;
             barraSuperior.BotonMinimizarClick += BarraSuperior_BotonMinimizarClick;
+            barraSuperior.BotonVolverClick += BarraSuperior_BotonVolverClick;
 
             LAdministracion la = new LAdministracion();
             List<Funcionario> funcionarios = la.obtener_funcionarios();
@@ -51,6 +52,13 @@ namespace CapaPresentacion
         private void BarraSuperior_BotonMinimizarClick(object sender, EventArgs e)
         {
             padre.WindowState = FormWindowState.Minimized;
+        }
+
+        private void BarraSuperior_BotonVolverClick(object sender, EventArgs e)
+        {
+            this.Dispose();
+            padre.Controls.Remove(this);
+            padre.Controls.Add(new Login(padre));
         }
 
         public Funcionario obtener_datos_funcionario()
@@ -87,6 +95,7 @@ namespace CapaPresentacion
             txt_contrasena.Text = string.Empty;
             // txt_rol.Text = string.Empty;
             menu_rol.Text = "0";
+            CargarUsuariosActivos();
         }
 
 
@@ -103,7 +112,7 @@ namespace CapaPresentacion
             try
             {
                 logica.DarAltaUsuario(cedula);
-                MessageBox.Show("Usuario dado de baja exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Usuario dado de alta exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
@@ -123,13 +132,14 @@ namespace CapaPresentacion
             // Agregar los usuarios activos al ListBox
             foreach (Funcionario f in funcionarios)
             {
-                listBoxUsuarios.Items.Add(f.nombre + " " + f.apellido);  // Mostramos el nombre y apellido
+                // Mostramos el nombre y apellido
+                listBoxUsuarios.Items.Add($"{f.nombre} - {f.apellido} ({f.cedula})"); 
             }
         }
 
         private void btnBajaUsuario_Click(object sender, EventArgs e)
         {
-            // Verificar si se ha seleccionado un usuario en el ListBox
+           /* // Verificar si se ha seleccionado un usuario en el ListBox
             if (listBoxUsuarios.SelectedIndex != -1)
             {
                 // Obtener el nombre completo del usuario seleccionado
@@ -160,7 +170,7 @@ namespace CapaPresentacion
             {
                 // Si no se ha seleccionado un usuario
                 MessageBox.Show("Por favor, selecciona un usuario para dar de baja.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+            }*/
         }
     }
 }
