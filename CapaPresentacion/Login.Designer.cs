@@ -97,7 +97,7 @@
             // 
             // btn_entrar
             // 
-            btn_entrar.BackColor = Color.Peru;
+            btn_entrar.BackColor = Color.Olive;
             btn_entrar.FlatStyle = FlatStyle.Popup;
             btn_entrar.Font = new Font("Segoe Print", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btn_entrar.Location = new Point(64, 262);

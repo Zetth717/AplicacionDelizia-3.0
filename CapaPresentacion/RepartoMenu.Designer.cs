@@ -38,7 +38,7 @@
             // 
             // btn_mis_pedidos
             // 
-            btn_mis_pedidos.BackColor = Color.Peru;
+            btn_mis_pedidos.BackColor = Color.Olive;
             btn_mis_pedidos.FlatStyle = FlatStyle.Popup;
             btn_mis_pedidos.Font = new Font("Segoe Print", 12F, FontStyle.Bold);
             btn_mis_pedidos.Location = new Point(84, 181);
@@ -51,7 +51,7 @@
             // 
             // btn_tomar_pedidos
             // 
-            btn_tomar_pedidos.BackColor = Color.Peru;
+            btn_tomar_pedidos.BackColor = Color.Olive;
             btn_tomar_pedidos.FlatStyle = FlatStyle.Popup;
             btn_tomar_pedidos.Font = new Font("Segoe Print", 12F, FontStyle.Bold);
             btn_tomar_pedidos.Location = new Point(84, 129);
@@ -64,7 +64,7 @@
             // 
             // btn_salir
             // 
-            btn_salir.BackColor = Color.Peru;
+            btn_salir.BackColor = Color.Firebrick;
             btn_salir.FlatStyle = FlatStyle.Popup;
             btn_salir.Font = new Font("Segoe Print", 12F, FontStyle.Bold);
             btn_salir.Location = new Point(84, 233);

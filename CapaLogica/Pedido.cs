@@ -17,5 +17,6 @@ namespace CapaLogica
         public List<Producto> productos = new List<Producto>();
         public string direccion = "";
         public string nombre_cliente = "";
+        public string telefono = "";
     }
 }

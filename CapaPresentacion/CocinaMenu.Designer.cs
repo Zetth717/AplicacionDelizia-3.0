@@ -37,7 +37,7 @@
             // 
             // btn_verpedidos
             // 
-            btn_verpedidos.BackColor = Color.Peru;
+            btn_verpedidos.BackColor = Color.Olive;
             btn_verpedidos.FlatStyle = FlatStyle.Popup;
             btn_verpedidos.Font = new Font("Segoe Print", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btn_verpedidos.Location = new Point(84, 152);
@@ -50,7 +50,7 @@
             // 
             // btn_salir
             // 
-            btn_salir.BackColor = Color.Peru;
+            btn_salir.BackColor = Color.Firebrick;
             btn_salir.FlatStyle = FlatStyle.Popup;
             btn_salir.Font = new Font("Segoe Print", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btn_salir.Location = new Point(84, 214);

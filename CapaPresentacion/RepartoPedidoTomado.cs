@@ -24,6 +24,7 @@ namespace CapaPresentacion
             label1.Text = "" + pedido.id;
             label2.Text = pedido.nombre_cliente;
             label3.Text = pedido.direccion;
+            label4.Text = pedido.telefono;
         }
 
         private void btn_cambiar_estado_Click(object sender, EventArgs e)

@@ -35,7 +35,7 @@
             // 
             // btn_cancelar
             // 
-            btn_cancelar.BackColor = Color.Peru;
+            btn_cancelar.BackColor = Color.Firebrick;
             btn_cancelar.FlatStyle = FlatStyle.Popup;
             btn_cancelar.Font = new Font("Segoe Print", 12F, FontStyle.Bold);
             btn_cancelar.Location = new Point(31, 541);
@@ -48,7 +48,7 @@
             // 
             // btn_siguiente
             // 
-            btn_siguiente.BackColor = Color.Peru;
+            btn_siguiente.BackColor = Color.Olive;
             btn_siguiente.FlatStyle = FlatStyle.Popup;
             btn_siguiente.Font = new Font("Segoe Print", 12F, FontStyle.Bold);
             btn_siguiente.Location = new Point(726, 541);

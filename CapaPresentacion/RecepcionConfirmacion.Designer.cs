@@ -52,7 +52,7 @@
             // 
             // btn_anterior
             // 
-            btn_anterior.BackColor = Color.Peru;
+            btn_anterior.BackColor = Color.Firebrick;
             btn_anterior.FlatStyle = FlatStyle.Popup;
             btn_anterior.Font = new Font("Segoe Print", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btn_anterior.Location = new Point(63, 544);
@@ -65,7 +65,7 @@
             // 
             // btn_confirmar
             // 
-            btn_confirmar.BackColor = Color.Peru;
+            btn_confirmar.BackColor = Color.Olive;
             btn_confirmar.FlatStyle = FlatStyle.Popup;
             btn_confirmar.Font = new Font("Segoe Print", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btn_confirmar.Location = new Point(725, 544);

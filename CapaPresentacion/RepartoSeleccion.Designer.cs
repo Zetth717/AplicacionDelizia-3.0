@@ -45,7 +45,7 @@
             // 
             // btn_volver
             // 
-            btn_volver.BackColor = Color.Peru;
+            btn_volver.BackColor = Color.Firebrick;
             btn_volver.FlatStyle = FlatStyle.Popup;
             btn_volver.Font = new Font("Segoe Print", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btn_volver.ForeColor = Color.Black;

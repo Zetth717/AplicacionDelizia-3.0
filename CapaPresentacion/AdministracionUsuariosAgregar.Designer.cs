@@ -97,7 +97,7 @@
             // 
             // btnBajaUsuario
             // 
-            btnBajaUsuario.BackColor = Color.Peru;
+            btnBajaUsuario.BackColor = Color.Firebrick;
             btnBajaUsuario.FlatStyle = FlatStyle.Popup;
             btnBajaUsuario.Font = new Font("Segoe Print", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnBajaUsuario.ForeColor = SystemColors.ControlText;
@@ -152,7 +152,7 @@
             // 
             // btn_ingresar
             // 
-            btn_ingresar.BackColor = Color.Peru;
+            btn_ingresar.BackColor = Color.Olive;
             btn_ingresar.FlatStyle = FlatStyle.Popup;
             btn_ingresar.Font = new Font("Segoe Print", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btn_ingresar.ForeColor = SystemColors.ControlText;
@@ -166,7 +166,7 @@
             // 
             // btnAlta
             // 
-            btnAlta.BackColor = Color.Peru;
+            btnAlta.BackColor = Color.Olive;
             btnAlta.FlatStyle = FlatStyle.Popup;
             btnAlta.Font = new Font("Segoe Print", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnAlta.ForeColor = SystemColors.ControlText;

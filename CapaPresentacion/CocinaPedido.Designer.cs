@@ -44,7 +44,7 @@
             // 
             // btn_cambiar_estado
             // 
-            btn_cambiar_estado.BackColor = Color.PeachPuff;
+            btn_cambiar_estado.BackColor = Color.Olive;
             btn_cambiar_estado.FlatStyle = FlatStyle.Popup;
             btn_cambiar_estado.Font = new Font("Segoe Print", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btn_cambiar_estado.Location = new Point(44, 210);

@@ -33,6 +33,7 @@
             label1 = new Label();
             btn_cambiar_estado = new Button();
             panel1 = new Panel();
+            label4 = new Label();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -41,7 +42,7 @@
             label3.AutoSize = true;
             label3.BorderStyle = BorderStyle.FixedSingle;
             label3.Font = new Font("Segoe Print", 12F, FontStyle.Bold);
-            label3.Location = new Point(13, 52);
+            label3.Location = new Point(13, 38);
             label3.Name = "label3";
             label3.Size = new Size(150, 30);
             label3.TabIndex = 7;
@@ -52,7 +53,7 @@
             label2.AutoSize = true;
             label2.BorderStyle = BorderStyle.FixedSingle;
             label2.Font = new Font("Segoe Print", 12F, FontStyle.Bold);
-            label2.Location = new Point(13, 16);
+            label2.Location = new Point(13, 6);
             label2.Name = "label2";
             label2.Size = new Size(138, 30);
             label2.TabIndex = 6;
@@ -72,7 +73,7 @@
             // 
             // btn_cambiar_estado
             // 
-            btn_cambiar_estado.BackColor = Color.PeachPuff;
+            btn_cambiar_estado.BackColor = Color.Olive;
             btn_cambiar_estado.FlatStyle = FlatStyle.Popup;
             btn_cambiar_estado.Font = new Font("Segoe Print", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btn_cambiar_estado.ForeColor = Color.Black;
@@ -88,12 +89,24 @@
             // 
             panel1.BackColor = Color.PeachPuff;
             panel1.BorderStyle = BorderStyle.FixedSingle;
+            panel1.Controls.Add(label4);
             panel1.Controls.Add(label3);
             panel1.Controls.Add(label2);
             panel1.Location = new Point(8, 39);
             panel1.Name = "panel1";
             panel1.Size = new Size(194, 113);
             panel1.TabIndex = 8;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.BorderStyle = BorderStyle.FixedSingle;
+            label4.Font = new Font("Segoe Print", 12F, FontStyle.Bold);
+            label4.Location = new Point(13, 70);
+            label4.Name = "label4";
+            label4.Size = new Size(81, 30);
+            label4.TabIndex = 8;
+            label4.Text = "Telefono";
             // 
             // RepartoPedido
             // 
@@ -117,5 +130,6 @@
         private Label label1;
         private Button btn_cambiar_estado;
         private Panel panel1;
+        private Label label4;
     }
 }
