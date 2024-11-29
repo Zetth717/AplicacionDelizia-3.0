@@ -95,7 +95,7 @@ namespace CapaPresentacion
                     string.IsNullOrWhiteSpace(menu_rol.Text) || menu_rol.Text == "0")
                 {
                     MessageBox.Show("Por favor, completa todos los campos antes de continuar.", "Campos Vacíos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return; // Salimos del método si hay campos vacíos
+                    return;
                 }
                 LAdministracion ladministracion = new LAdministracion();
 
@@ -148,17 +148,12 @@ namespace CapaPresentacion
 
         private void CargarUsuariosActivos()
         {
-            // Limpiar el ListBox antes de agregar nuevos elementos
+           
             listBoxUsuarios.Items.Clear();
-
-            // Obtener los usuarios activos
             LAdministracion logica = new LAdministracion();
             List<Funcionario> funcionarios = logica.obtener_funcionarios();
-
-            // Agregar los usuarios activos al ListBox
             foreach (Funcionario f in funcionarios)
             {
-                // Mostramos el nombre y apellido
                 listBoxUsuarios.Items.Add($"{f.nombre} - {f.apellido} ({f.cedula})");
             }
         }
@@ -166,30 +161,18 @@ namespace CapaPresentacion
         
         private void btnBajaUsuario_Click(object sender, EventArgs e)
         {
-
-            // Verificar si se ha seleccionado un usuario en el ListBox
             if (listBoxUsuarios.SelectedIndex != -1)
             {
-                // Obtener el texto seleccionado en el ListBox
                 string seleccion = listBoxUsuarios.SelectedItem.ToString();
-
-                // Dividir el texto para extraer la cédula, si se incluye
                 string cedulaSeleccionada = seleccion.Split('(').Last().Trim(')', ' ');
-
-                // Buscar al Funcionario por la cédula
                 LAdministracion logica = new LAdministracion();
                 Funcionario usuarioSeleccionado = logica.obtener_funcionarios()
                     .FirstOrDefault(f => f.cedula == cedulaSeleccionada);
 
                 if (usuarioSeleccionado != null)
                 {
-                    // Dar de baja al usuario
                     logica.DarBajaUsuario(usuarioSeleccionado.cedula);
-
-                    // Mostrar mensaje de éxito
                     MessageBox.Show("Usuario dado de baja exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                    // Recargar la lista de usuarios activos para reflejar los cambios
                     CargarUsuariosActivos();
                 }
                 else
@@ -199,7 +182,6 @@ namespace CapaPresentacion
             }
             else
             {
-                // Si no se ha seleccionado un usuario
                 MessageBox.Show("Por favor, selecciona un usuario para dar de baja.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }

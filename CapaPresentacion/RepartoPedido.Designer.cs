@@ -34,6 +34,7 @@
             btn_cambiar_estado = new Button();
             panel1 = new Panel();
             label4 = new Label();
+            lbl_Precio = new Label();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -77,7 +78,7 @@
             btn_cambiar_estado.FlatStyle = FlatStyle.Popup;
             btn_cambiar_estado.Font = new Font("Segoe Print", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btn_cambiar_estado.ForeColor = Color.Black;
-            btn_cambiar_estado.Location = new Point(48, 174);
+            btn_cambiar_estado.Location = new Point(48, 185);
             btn_cambiar_estado.Name = "btn_cambiar_estado";
             btn_cambiar_estado.Size = new Size(107, 36);
             btn_cambiar_estado.TabIndex = 4;
@@ -89,12 +90,13 @@
             // 
             panel1.BackColor = Color.PeachPuff;
             panel1.BorderStyle = BorderStyle.FixedSingle;
+            panel1.Controls.Add(lbl_Precio);
             panel1.Controls.Add(label4);
             panel1.Controls.Add(label3);
             panel1.Controls.Add(label2);
             panel1.Location = new Point(8, 39);
             panel1.Name = "panel1";
-            panel1.Size = new Size(194, 113);
+            panel1.Size = new Size(194, 140);
             panel1.TabIndex = 8;
             // 
             // label4
@@ -107,6 +109,17 @@
             label4.Size = new Size(81, 30);
             label4.TabIndex = 8;
             label4.Text = "Telefono";
+            // 
+            // lbl_Precio
+            // 
+            lbl_Precio.AutoSize = true;
+            lbl_Precio.BorderStyle = BorderStyle.FixedSingle;
+            lbl_Precio.Font = new Font("Segoe Print", 12F, FontStyle.Bold);
+            lbl_Precio.Location = new Point(13, 102);
+            lbl_Precio.Name = "lbl_Precio";
+            lbl_Precio.Size = new Size(63, 30);
+            lbl_Precio.TabIndex = 9;
+            lbl_Precio.Text = "Precio";
             // 
             // RepartoPedido
             // 
@@ -131,5 +144,6 @@
         private Button btn_cambiar_estado;
         private Panel panel1;
         private Label label4;
+        private Label lbl_Precio;
     }
 }

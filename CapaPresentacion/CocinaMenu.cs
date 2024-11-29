@@ -23,8 +23,7 @@ namespace CapaPresentacion
             this.user = user;
             // Instanciar y configurar la barra
             barraSuperior = new MinimizarCerrar();
-            barraSuperior.Dock = DockStyle.Top; // O usar: barraSuperior.Location = new Point(0, 0);
-            barraSuperior.Width = this.Width; // Asegúrate de ajustar al tamaño del formulario
+            barraSuperior.Dock = DockStyle.Top;
             this.Controls.Add(barraSuperior);
             // Eventos de la barra
             barraSuperior.BotonCerrarClick += BarraSuperior_BotonCerrarClick;

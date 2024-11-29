@@ -25,6 +25,7 @@ namespace CapaPresentacion
             label2.Text = pedido.nombre_cliente;
             label3.Text = pedido.direccion;
             label4.Text = pedido.telefono;
+            lbl_Precio.Text = "$" + pedido.precio.ToString("F2");
         }
 
         private void btn_cambiar_estado_Click(object sender, EventArgs e)

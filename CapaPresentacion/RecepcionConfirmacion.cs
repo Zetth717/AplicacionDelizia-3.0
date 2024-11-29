@@ -53,10 +53,13 @@ namespace CapaPresentacion
             List<Producto> productos_seleccionados = new List<Producto>();
             int x = 3;
             int y = 3;
+            double precioTotal = 0;
             foreach (Producto producto in productos)
             {
                 if (producto.cantidad > 0)
                 {
+                    precioTotal += producto.precio * producto.cantidad;
+
                     RecepcionConfirmacionProducto rp = new RecepcionConfirmacionProducto(producto);
                     y += 3 + rp.Height;
                     rp.Location = new Point(x, y);
@@ -64,6 +67,8 @@ namespace CapaPresentacion
                     productos_seleccionados.Add(producto);
                 }
             }
+
+            lbl_total.Text = "Precio Total: $" + precioTotal.ToString("0.00");
 
             foreach (RecepcionConfirmacionProducto producto in productos_graficos)
             {

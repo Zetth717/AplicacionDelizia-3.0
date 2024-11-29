@@ -34,6 +34,7 @@
             label3 = new Label();
             pan_productos = new Panel();
             label4 = new Label();
+            lbl_Precio = new Label();
             pan_productos.SuspendLayout();
             SuspendLayout();
             // 
@@ -42,7 +43,7 @@
             btn_cambiar_estado.BackColor = Color.Olive;
             btn_cambiar_estado.FlatStyle = FlatStyle.Popup;
             btn_cambiar_estado.Font = new Font("Segoe Print", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btn_cambiar_estado.Location = new Point(48, 174);
+            btn_cambiar_estado.Location = new Point(48, 185);
             btn_cambiar_estado.Name = "btn_cambiar_estado";
             btn_cambiar_estado.Size = new Size(107, 36);
             btn_cambiar_estado.TabIndex = 0;
@@ -88,12 +89,13 @@
             // 
             pan_productos.BackColor = Color.PeachPuff;
             pan_productos.BorderStyle = BorderStyle.FixedSingle;
+            pan_productos.Controls.Add(lbl_Precio);
             pan_productos.Controls.Add(label4);
             pan_productos.Controls.Add(label3);
             pan_productos.Controls.Add(label2);
             pan_productos.Location = new Point(8, 39);
             pan_productos.Name = "pan_productos";
-            pan_productos.Size = new Size(194, 113);
+            pan_productos.Size = new Size(194, 140);
             pan_productos.TabIndex = 4;
             // 
             // label4
@@ -106,6 +108,17 @@
             label4.Size = new Size(81, 30);
             label4.TabIndex = 4;
             label4.Text = "Telefono";
+            // 
+            // lbl_Precio
+            // 
+            lbl_Precio.AutoSize = true;
+            lbl_Precio.BorderStyle = BorderStyle.FixedSingle;
+            lbl_Precio.Font = new Font("Segoe Print", 12F, FontStyle.Bold);
+            lbl_Precio.Location = new Point(13, 102);
+            lbl_Precio.Name = "lbl_Precio";
+            lbl_Precio.Size = new Size(63, 30);
+            lbl_Precio.TabIndex = 5;
+            lbl_Precio.Text = "Precio";
             // 
             // RepartoPedidoTomado
             // 
@@ -130,5 +143,6 @@
         private Label label3;
         private Panel pan_productos;
         private Label label4;
+        private Label lbl_Precio;
     }
 }
