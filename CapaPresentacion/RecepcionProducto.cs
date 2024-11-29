@@ -20,9 +20,24 @@ namespace CapaPresentacion
             this.producto = producto;
             actualizar_informacion();
 
+            /*
             string ruta_imagen = "C:\\Users\\crist\\OneDrive\\Escritorio\\delizia_app_funcional\\aplicacion-delizia\\AplicacionDelizia\\Imagenes\\" + producto.id + ".png";
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.ImageLocation = ruta_imagen;
+            */
+            
+            string carpetaImagenes = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Imagenes");
+            string ruta_imagen = Path.Combine(carpetaImagenes, producto.id + ".png");
+
+            if (File.Exists(ruta_imagen))
+            {
+                pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+                pictureBox1.ImageLocation = ruta_imagen;
+            }
+            else
+            {
+                //pictureBox1.Image = Properties.Resources.ImagenPredeterminada;
+            }
         }
 
         public void actualizar_informacion()

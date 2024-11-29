@@ -10,6 +10,36 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Imagenes\1.png" />
+    <None Remove="Imagenes\2.png" />
+    <None Remove="Imagenes\3.png" />
+    <None Remove="Imagenes\4.png" />
+    <None Remove="Imagenes\5.png" />
+    <None Remove="Imagenes\6.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Imagenes\1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Imagenes\2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Imagenes\3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Imagenes\4.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Imagenes\5.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Imagenes\6.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\CapaLogica\CapaLogica.csproj" />
   </ItemGroup>
 
