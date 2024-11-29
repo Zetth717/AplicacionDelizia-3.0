@@ -90,9 +90,9 @@
             listBoxUsuarios.Font = new Font("Segoe Print", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             listBoxUsuarios.FormattingEnabled = true;
             listBoxUsuarios.ItemHeight = 28;
-            listBoxUsuarios.Location = new Point(23, 82);
+            listBoxUsuarios.Location = new Point(12, 82);
             listBoxUsuarios.Name = "listBoxUsuarios";
-            listBoxUsuarios.Size = new Size(277, 312);
+            listBoxUsuarios.Size = new Size(297, 312);
             listBoxUsuarios.TabIndex = 27;
             // 
             // btnBajaUsuario
@@ -249,7 +249,9 @@
             menu_rol.BorderStyle = BorderStyle.FixedSingle;
             menu_rol.Font = new Font("Segoe Print", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             menu_rol.Location = new Point(308, 152);
+            menu_rol.Maximum = new decimal(new int[] { 4, 0, 0, 0 });
             menu_rol.Name = "menu_rol";
+            menu_rol.ReadOnly = true;
             menu_rol.Size = new Size(38, 36);
             menu_rol.TabIndex = 20;
             // 

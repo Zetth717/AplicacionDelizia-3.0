@@ -124,6 +124,7 @@ namespace CapaPresentacion
 
         private void btnAlta_Click(object sender, EventArgs e)
         {
+            /*
             string cedula = textCedulaAlta.Text.Trim();
             if (string.IsNullOrEmpty(cedula))
             {
@@ -143,6 +144,42 @@ namespace CapaPresentacion
             {
                 MessageBox.Show("Error al dar de baja al usuario: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            */
+
+            string cedula = textCedulaAlta.Text.Trim();
+            if (string.IsNullOrEmpty(cedula))
+            {
+                MessageBox.Show("Por favor, ingresa una cédula válida.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            LAdministracion logica = new LAdministracion();
+            try
+            {
+                string estado = logica.ObtenerEstadoCedula(cedula);
+
+                if (estado == null)
+                {
+                    MessageBox.Show("La cédula ingresada no existe en el sistema.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (estado.Equals("Si", StringComparison.OrdinalIgnoreCase))
+                {
+                    MessageBox.Show("El funcionario ya se encuentra activo.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+
+                logica.DarAltaUsuario(cedula);
+                MessageBox.Show("Usuario dado de alta exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                textCedulaAlta.Text = "";
+                CargarUsuariosActivos();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al dar de alta al usuario: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
             
 
@@ -154,7 +191,7 @@ namespace CapaPresentacion
             List<Funcionario> funcionarios = logica.obtener_funcionarios();
             foreach (Funcionario f in funcionarios)
             {
-                listBoxUsuarios.Items.Add($"{f.nombre} - {f.apellido} ({f.cedula})");
+                listBoxUsuarios.Items.Add($"{f.nombre} - {f.apellido} - ({f.cedula})");
             }
         }
 

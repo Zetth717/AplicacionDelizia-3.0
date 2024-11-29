@@ -75,5 +75,17 @@ namespace CapaLogica
             DAdministracion datos = new DAdministracion();
             datos.DarBajaUsuario(cedula);
         }
+
+        public string ObtenerEstadoCedula(string cedula)
+        {
+            string consulta = $"SELECT Activo FROM funcionarios WHERE Cedula = '{cedula}'";
+            Conexion conexion = new Conexion();
+            var resultados = conexion.consultar(consulta);
+            if (resultados.Count > 0 && resultados[0].Count > 0)
+            {
+                return resultados[0][0];
+            }
+            return null;
+        }
     }
 }
