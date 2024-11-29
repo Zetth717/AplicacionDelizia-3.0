@@ -105,7 +105,7 @@
             btnBajaUsuario.Name = "btnBajaUsuario";
             btnBajaUsuario.Size = new Size(153, 36);
             btnBajaUsuario.TabIndex = 26;
-            btnBajaUsuario.Text = "Baja usuario";
+            btnBajaUsuario.Text = "Baja";
             btnBajaUsuario.UseVisualStyleBackColor = false;
             btnBajaUsuario.Click += btnBajaUsuario_Click;
             // 
@@ -160,7 +160,7 @@
             btn_ingresar.Name = "btn_ingresar";
             btn_ingresar.Size = new Size(153, 36);
             btn_ingresar.TabIndex = 16;
-            btn_ingresar.Text = "Ingresar usuario";
+            btn_ingresar.Text = "Ingresar";
             btn_ingresar.UseVisualStyleBackColor = false;
             btn_ingresar.Click += btn_ingresar_Click;
             // 
@@ -174,7 +174,7 @@
             btnAlta.Name = "btnAlta";
             btnAlta.Size = new Size(153, 36);
             btnAlta.TabIndex = 23;
-            btnAlta.Text = "Alta usuario";
+            btnAlta.Text = "Alta";
             btnAlta.UseVisualStyleBackColor = false;
             btnAlta.Click += btnAlta_Click;
             // 
