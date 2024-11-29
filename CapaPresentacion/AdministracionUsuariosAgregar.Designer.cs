@@ -114,11 +114,11 @@
             label11.AutoSize = true;
             label11.Font = new Font("Segoe Print", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label11.ForeColor = Color.PeachPuff;
-            label11.Location = new Point(101, 5);
+            label11.Location = new Point(91, 5);
             label11.Name = "label11";
-            label11.Size = new Size(111, 28);
+            label11.Size = new Size(144, 28);
             label11.TabIndex = 24;
-            label11.Text = "Baja usuario";
+            label11.Text = "Baja funcionario";
             // 
             // panel2
             // 
@@ -183,11 +183,11 @@
             label9.AutoSize = true;
             label9.Font = new Font("Segoe Print", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label9.ForeColor = Color.PeachPuff;
-            label9.Location = new Point(192, 5);
+            label9.Location = new Point(188, 5);
             label9.Name = "label9";
-            label9.Size = new Size(141, 28);
+            label9.Size = new Size(174, 28);
             label9.TabIndex = 22;
-            label9.Text = "Ingresar usuario";
+            label9.Text = "Ingresar funcionario";
             // 
             // label12
             // 
@@ -226,11 +226,11 @@
             label10.AutoSize = true;
             label10.Font = new Font("Segoe Print", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label10.ForeColor = Color.PeachPuff;
-            label10.Location = new Point(346, 284);
+            label10.Location = new Point(329, 284);
             label10.Name = "label10";
-            label10.Size = new Size(109, 28);
+            label10.Size = new Size(142, 28);
             label10.TabIndex = 23;
-            label10.Text = "Alta usuario";
+            label10.Text = "Alta funcionario";
             // 
             // label8
             // 
