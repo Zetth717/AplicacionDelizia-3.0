@@ -122,7 +122,7 @@ namespace CapaPresentacion
         }
 
 
-    private void btnAlta_Click(object sender, EventArgs e)
+        private void btnAlta_Click(object sender, EventArgs e)
         {
             string cedula = textCedulaAlta.Text.Trim();
             if (string.IsNullOrEmpty(cedula))
@@ -136,6 +136,7 @@ namespace CapaPresentacion
             {
                 logica.DarAltaUsuario(cedula);
                 MessageBox.Show("Usuario dado de alta exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                textCedulaAlta.Text = "";
                 CargarUsuariosActivos();
             }
             catch (Exception ex)
@@ -143,6 +144,7 @@ namespace CapaPresentacion
                 MessageBox.Show("Error al dar de baja al usuario: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+            
 
         private void CargarUsuariosActivos()
         {

@@ -29,9 +29,11 @@ namespace CapaDatos
 
         public void DarBajaUsuario(string cedula)
         {
+
             Conexion conexion = new Conexion();
             string consulta = "UPDATE `funcionarios` SET `Activo` = 'NO' WHERE `Cedula` = '" + cedula + "'";
             conexion.modificar(consulta);
+
         }
     }
 }
