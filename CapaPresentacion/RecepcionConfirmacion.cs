@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -147,6 +148,7 @@ namespace CapaPresentacion
 
                 // generamos el ticket
                 lrecepcion.crear_ticket(pedido.fecha, pedido.hora, pedido.id);
+                MessageBox.Show("Pedido confirmado!");
 
                 // antes de cambiar de ventada
                 this.Dispose();
